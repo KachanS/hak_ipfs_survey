@@ -1,0 +1,22 @@
+{
+  "name": "ipfs-survey-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aragon/api": "^2.0.0",
+    "@aragon/connect": "^0.7.0",
+    "@aragon/connect-tokens": "^0.7.0",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-namespace": "^0.1.1",
+    "ipfs": "^0.54.4",
+    "ipfs-http-client": "^49.0.4"
+  }
+}
