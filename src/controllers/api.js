@@ -154,8 +154,12 @@ module.exports = app => {
                     throw `Invalid value "${value}"`;
                 }
 
+                const ts = new Date().getTime();
+
+                const balance = getTokenBalance(survey.token, address);
+
                 await client.files.mkdir(`/${ROOT_DIR}/${survey.id}`);
-                await client.files.write(`/${ROOT_DIR}/${survey.id}/${address}`, JSON.stringify({ ts, address, sign, value }), {create: true});
+                await client.files.write(`/${ROOT_DIR}/${survey.id}/${address}`, JSON.stringify({ ts, address, sign, value, balance }), {create: true});
 
                 res.json({
                     result: true,
